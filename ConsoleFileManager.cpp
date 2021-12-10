@@ -14,7 +14,7 @@ ConsoleFileManager::ConsoleFileManager(const std::string &path) : ConsoleFileMan
     fileManager.changePath(path);
 }
 
-std::string ConsoleFileManager::userInput(std::string alert) {
+std::string ConsoleFileManager::userInput(const char *alert) {
     std::cout << alert << ": ";
     std::string input;
     std::cin >> input;
@@ -89,7 +89,6 @@ void ConsoleFileManager::renderOptions() const {
         counter++;
     }
 }
-
 
 void ConsoleFileManager::chooseOption() {
     int option = std::stoi(userInput("Choose option"));

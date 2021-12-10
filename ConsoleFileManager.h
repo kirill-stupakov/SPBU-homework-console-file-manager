@@ -11,7 +11,7 @@ private:
     int selectedOption = 1;
     inline static bool shouldExit = false;
 
-    static std::string userInput(std::string);
+    static std::string userInput(const char *);
 
     static void changeFolder();
     static void listContent();
@@ -39,5 +39,4 @@ public:
     explicit ConsoleFileManager(const std::string&);
 
     void start();
-
 };
