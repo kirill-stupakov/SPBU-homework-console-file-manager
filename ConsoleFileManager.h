@@ -8,6 +8,7 @@
 class ConsoleFileManager {
 private:
     inline static FileManagerCore fileManager;
+    std::vector<FileManagerOption> options;
     int selectedOption = 1;
     inline static bool shouldExit = false;
 
@@ -21,21 +22,14 @@ private:
     static void showFileContent();
     static void exit();
 
-    std::vector<FileManagerOption> options;
-
     void renderCurrentPath() const;
-
     void renderOptions() const;
-
     void chooseOption();
-
     void executeOption();
-
     static void drawSeparator();
 
 public:
     ConsoleFileManager();
-
     explicit ConsoleFileManager(const std::string&);
 
     void start();
