@@ -1,8 +1,9 @@
-#include <iostream>
+#include "ConsoleFileManager.h"
 using namespace std;
 
 int main() {
-    std::cout << "Hello, World!\n";
+    ConsoleFileManager manager;
+    manager.start();
 
     return 0;
 }
